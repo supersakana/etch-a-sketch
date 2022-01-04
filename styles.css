@@ -32,6 +32,7 @@ body {
 #sketch-grid {
   width: 450px;
   height: 450px;
+  background-color: #ffffff;
   border: groove #959595 8px;
   border-radius: 4px;
   display: grid;
@@ -42,8 +43,7 @@ body {
 .grid-item {
   width: 100%;
   height: 100%;
-  background-color: #ffffff;
-  border: #000000 solid 0.2px;
+  border: solid blue 0.3px;
 }
 
 button {
@@ -57,6 +57,10 @@ button {
   background-color: #0ac30a;
   color: #ffffff;
   border-radius: 8px;
+}
+
+.cell-hover {
+  background-color: rgb(174, 0, 255);
 }
 
 button:hover {
