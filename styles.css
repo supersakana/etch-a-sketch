@@ -17,15 +17,13 @@ body {
   align-items: center;
   height: 100vh;
   width: 100%;
-  background: rgb(200, 9, 44);
-  background: linear-gradient(
-    120deg,
-    rgba(200, 9, 44, 1) 13%,
-    rgba(205, 8, 40, 1) 16%,
-    rgba(17, 31, 196, 1) 51%,
-    rgba(5, 184, 221, 1) 86%
-  );
   color: #ffffff;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 
 .fullpage h1 {

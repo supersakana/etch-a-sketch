@@ -4,6 +4,7 @@ let sketchGrid = document.getElementById('sketch-grid');
 let resetBtn = document.getElementById('reset-btn');
 let gridSize = 16 * 16;
 let widthHeight = document.getElementById('width-height')
+let colorBtn = document.getElementById('color-btn')
 
 // GENERATES DEFAULT GRIDS
 function cellGenerator(){
@@ -45,3 +46,26 @@ resetBtn.addEventListener('click', () => {
         cell.classList.remove('cell-hover'));
 
 })
+
+// BUTTON THAT MAKES THE HOVER EFFECT RAINBOW
+colorBtn.addEventListener('click', () => {
+    sketchGrid.querySelectorAll('.cell-hover').forEach(cell =>
+        cell.classList.remove('cell-hover'));
+
+
+});
+
+
+
+// ARRAY OF RANDOM COLORS 
+
+// RANDOMIZER
+
+
+function randomizer(){
+randomColors[Math.floor(Math.random() * randomColors.length)]
+};
+
+
+
+
