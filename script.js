@@ -4,7 +4,7 @@ let sketchGrid = document.getElementById('sketch-grid');
 let resetBtn = document.getElementById('reset-btn');
 let gridSize = 16 * 16;
 let widthHeight = document.getElementById('width-height')
-let colorBtn = document.getElementById('color-btn')
+// let colorBtn = document.getElementById('color-btn')
 
 // GENERATES DEFAULT GRIDS
 function cellGenerator(){
@@ -21,14 +21,14 @@ function cellGenerator(){
 cellGenerator()
 widthHeight.innerText = '16 X 16'
 
-// BUTTON THAT CLEARS THE SKETCH GRID AND CREATES CUSTOM PROMPT
+// CLEARS GRID AND PROMPT
 resetBtn.addEventListener('click', () => {
     let userNum =prompt('Plug in a number to specify the width/height of the cells', '1-100');
 
     if(userNum >= 1 && userNum <= 100){
         sketchGrid.classList.remove('default-grid');
         sketchGrid.classList.add('custom-grid');
-//ADDS CUSTOM ROWS TO THE GRID 
+//CUSTOM SIZING
         gridSize = userNum * userNum;
         sketchGrid.style.gridTemplateColumns = 
         `repeat(${userNum}, 1fr)`;
@@ -41,31 +41,11 @@ resetBtn.addEventListener('click', () => {
         alert('That was not a valid input, try again');
     }
 
-// CLEARS THE PREVIOUS SKETCH
+// CLEAR
     sketchGrid.querySelectorAll('.cell-hover').forEach(cell => 
         cell.classList.remove('cell-hover'));
 
 })
-
-// BUTTON THAT MAKES THE HOVER EFFECT RAINBOW
-colorBtn.addEventListener('click', () => {
-    sketchGrid.querySelectorAll('.cell-hover').forEach(cell =>
-        cell.classList.remove('cell-hover'));
-
-
-});
-
-
-
-// ARRAY OF RANDOM COLORS 
-
-// RANDOMIZER
-
-
-function randomizer(){
-randomColors[Math.floor(Math.random() * randomColors.length)]
-};
-
 
 
 
