@@ -4,8 +4,6 @@ let sketchGrid = document.getElementById('sketch-grid');
 let resetBtn = document.getElementById('reset-btn');
 let gridSize = 16 * 16;
 let widthHeight = document.getElementById('width-height')
-// let colorBtn = document.getElementById('color-btn')
-
 // GENERATES DEFAULT GRIDS
 function cellGenerator(){
     for(i = 0; i < gridSize; i++){
@@ -15,7 +13,6 @@ function cellGenerator(){
         })
         gridItem.className = "grid-item";
         sketchGrid.appendChild(gridItem);
-
     }
 }
 cellGenerator()
@@ -36,16 +33,10 @@ resetBtn.addEventListener('click', () => {
         `repeat(${userNum}, 1fr)`;
         widthHeight.innerText = userNum + " X " + userNum;
         cellGenerator();
-
     } else {
         alert('That was not a valid input, try again');
     }
-
 // CLEAR
     sketchGrid.querySelectorAll('.cell-hover').forEach(cell => 
         cell.classList.remove('cell-hover'));
-
 })
-
-
-
