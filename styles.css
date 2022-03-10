@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Montserrat", sans-serif;
 }
 
 .fullpage {
@@ -17,12 +17,22 @@ body {
   align-items: center;
   height: 94vh;
   width: 100%;
-  color: #ffffff;
+  color: rgb(0, 0, 0);
   background: rgb(255, 255, 255);
+  background: rgb(163, 209, 253);
+  background: rgb(163, 209, 253);
   background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(0, 0, 0, 1) 100%
+    230deg,
+    rgba(163, 209, 253, 1) 0%,
+    rgba(228, 229, 220, 1) 8%,
+    rgba(244, 196, 253, 1) 16%,
+    rgba(195, 211, 253, 1) 23%,
+    rgba(247, 250, 251, 1) 42%,
+    rgba(247, 250, 251, 1) 58%,
+    rgba(159, 231, 227, 1) 77%,
+    rgba(208, 214, 169, 1) 84%,
+    rgba(220, 158, 160, 1) 92%,
+    rgba(201, 174, 212, 1) 100%
   );
 }
 
@@ -40,26 +50,21 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  color: #fff;
+  color: #000;
   font-family: "Montserrat", sans-serif;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    270deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  background: #ffffff;
   z-index: 1;
+  border-top: 1px #000 solid;
 }
 
 footer i {
-  color: #fff;
+  color: #000;
 }
 
 #sketch-grid {
   width: 400px;
   height: 400px;
   background-color: #ffffffb4;
-  border: groove #959595 8px;
   border-radius: 4px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
   /* Box Shadow (horizontal, vertical, blur, color) */
@@ -86,20 +91,19 @@ button {
   border: none;
   outline: none;
   padding: 5px 15px;
-  font-size: 1.7rem;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: bold;
-  background-color: #e70303;
-  color: #ffffff;
+  font-size: 1.3rem;
+  background-color: #fff;
+  color: #000;
   border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
 }
 
 .cell-hover {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
 
 button:hover {
-  background-color: #ff4a4a;
+  background-color: #a6bfff;
   cursor: pointer;
   transform: scale(0.95);
 }
