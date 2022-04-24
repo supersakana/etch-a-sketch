@@ -1,10 +1,11 @@
 
-// GLOBAL VARIABLES
+// variables
 let sketchGrid = document.getElementById('sketch-grid');
 let resetBtn = document.getElementById('reset-btn');
 let gridSize = 16 * 16;
 let widthHeight = document.getElementById('width-height')
-// GENERATES DEFAULT GRIDS
+
+// generates grid cells
 function cellGenerator(){
     for(i = 0; i < gridSize; i++){
         let gridItem = document.createElement('div');
@@ -18,14 +19,15 @@ function cellGenerator(){
 cellGenerator()
 widthHeight.innerText = '16 X 16'
 
-// CLEARS GRID AND PROMPT
+// clears grid and prompts user to enter grid size
 resetBtn.addEventListener('click', () => {
     let userNum =prompt('Plug in a number to specify the width/height of the cells', '1-100');
 
     if(userNum >= 1 && userNum <= 100){
         sketchGrid.classList.remove('default-grid');
         sketchGrid.classList.add('custom-grid');
-//CUSTOM SIZING
+
+//  custom sizing feature
         gridSize = userNum * userNum;
         sketchGrid.style.gridTemplateColumns = 
         `repeat(${userNum}, 1fr)`;
@@ -36,7 +38,8 @@ resetBtn.addEventListener('click', () => {
     } else {
         alert('That was not a valid input, try again');
     }
-// CLEAR
+
+// clear
     sketchGrid.querySelectorAll('.cell-hover').forEach(cell => 
         cell.classList.remove('cell-hover'));
 })
